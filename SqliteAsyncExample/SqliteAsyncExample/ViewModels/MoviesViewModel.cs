@@ -10,7 +10,8 @@ namespace SqliteAsyncExample.ViewModels
 {
     public class MoviesViewModel : BaseViewModel
     {
-        private static IMoviesService MoviesService { get; } = DependencyService.Get<IMoviesService>();
+        private static IMoviesService MoviesService { get; } = DependencyService.Get<IMoviesService>();        
+		private IList<Movie> _movies;        
 
         public MoviesViewModel(Page page)
         {
@@ -22,7 +23,6 @@ namespace SqliteAsyncExample.ViewModels
             };
         }
 
-        private IList<Movie> _movies;
         public IList<Movie> Movies
         {
             get { return _movies; }
