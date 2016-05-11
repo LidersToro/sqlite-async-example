@@ -7,6 +7,38 @@ with proper locking so you won't end up with deadlocks.
 
 If there's anything wrong or missing, please send through a pull request :)
 
+## โครงสร้างโปรเจค
+
+```
+└── SqliteAsyncExample
+    ├── Droid
+    │   ├── MainActivity.cs
+    │   ├── Properties
+    │   │   └── AssemblyInfo.cs
+    │   └── SQLite_Android.cs
+    ├── SqliteAsyncExample
+    │   ├── Helpers
+    │   │   └── AsyncSemaphore.cs
+    │   ├── ISQLite.cs
+    │   ├── Models
+    │   │   └── Movie.cs
+    │   ├── Properties
+    │   │   └── AssemblyInfo.cs
+    │   ├── Services
+    │   │   ├── IMoviesService.cs
+    │   │   └── MoviesService.cs
+    │   ├── SqliteAsyncExample.cs
+    │   ├── ViewModels
+    │   │   └── MoviesViewModel.cs
+    │   └── Views
+    │       ├── MoviesPage.xaml
+    │       └── MoviesPage.xaml.cs
+    └── iOS
+        ├── AppDelegate.cs
+        ├── Main.cs
+        └── SQLite_iOS.cs
+```
+
 ## Api ที่เกี่ยวข้อง
 
 - DependencyService - https://developer.xamarin.com/guides/xamarin-forms/dependency-service
